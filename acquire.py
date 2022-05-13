@@ -63,7 +63,8 @@ def new_iris_data():
                     sepal_length,
                     sepal_width,
                     petal_length,
-                    petal_width
+                    petal_width,
+                    measurement_id
                 FROM measurements
                 JOIN species USING(species_id)
                 """
@@ -128,4 +129,4 @@ def get_telco_data():
         # Cache data
         df.to_csv('telco.csv')
         
-    return 
+    return df
